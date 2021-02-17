@@ -1,0 +1,483 @@
+version: "2.0"
+nlu:
+- intent: affirm
+  examples: |
+    - indeed
+    - correct
+    - that sounds good
+    - yes
+    - yess please
+    - of course
+    - yup
+    - yeah
+    - yes please
+    - yes plz
+    - Sure
+    - Ok
+    - sweet
+    - cool,
+    - yes...
+    - y
+    - sure
+    - ok
+    - cool
+    - go for it
+    - yep
+    - yep, will do thank you
+    - I'm sure I will!
+    - oh awesome!
+    - Yes
+    - accept
+    - I accept
+    - i accept
+    - ok i accept
+    - I changed my mind. I want to accept it
+    - ok cool
+    - alright
+    - i will!
+    - ok, I behave now
+    - yop
+    - oki doki
+    - yes please!
+    - jo
+    - yep if i have to
+    - amayzing
+    - confirm
+    - nice
+    - coolio
+    - definitely yes without a doubt
+    - yas
+    - perfect
+    - sure thing
+    - absolutely
+    - Oh, ok
+    - hm, i'd like that
+    - ja
+    - sure!
+    - yes i accept
+    - Sweet
+    - amazing!
+    - how nice!
+    - cool!
+    - yay
+    - yes accept please
+    - great
+    - oh cool
+    - fine
+    - i will take that
+    - that sounds just right
+    - ofcourse!
+- intent: goodbye
+  examples: |
+    - see you later
+    - goodbye
+    - i'm done
+    - quit
+    - stop
+    - bye
+    - Adios
+    - BYEE
+    - GOODBYE
+    - Thanks a lot. See ya later
+    - goodnight
+    - good bye
+    - good night
+    - see ya
+    - toodle-oo
+    - bye bye
+    - gotta go
+    - farewell
+    - catch you later
+    - bye for now
+    - bye was nice talking to you
+    - bye udo
+    - bye bye bot
+    - bye bot
+    - k byyye #slay
+    - tlak to you later
+    - ciao
+    - Bye bye
+    - then bye
+    - bye!
+    - alright, goodbye
+    - goodbye buddy!
+- intent: greet
+  examples: |
+    - Hi
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello
+    - Good morning
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - hallo
+    - heeey
+    - hi hi
+    - hey
+    - hey hey
+    - hello there
+    - hi
+    - hello
+    - yo
+    - hola
+    - hi?
+    - hey bot!
+    - hello friend
+    - good morning
+    - hii
+    - hello sweet boy
+    - yoo
+    - hey there
+    - hiihihi
+    - hello sweatheart
+    - hellooo
+    - helloooo
+    - heyo
+    - ayyyy whaddup
+    - hello?
+    - Hallo
+    - heya
+    - hey bot
+    - howdy
+    - Hellllooooooo
+    - whats up
+    - Hei
+    - Well hello there ;)
+    - I said, helllllloooooO!!!!
+    - Heya
+    - Whats up my bot
+    - hiii
+    - heyho
+    - hey, let's talk
+    - hey let's talk
+    - jojojo
+    - hey dude
+    - hello it is me again
+    - what up
+    - jop
+    - hi friend
+    - hi there it's me
+    - good evening
+    - good afternoon
+    - hin greet
+    - hello there!
+- intent: thank_you
+  examples: |
+    - thank you goodbye
+    - okay thank you goodbye
+    - thank you bye
+    - um okay thank you good bye
+    - thank you
+    - and thats all thank you and good bye
+    - okay thank you
+    - thanks
+    - thanks goodbye
+    - thank you and good bye
+    - Thanks!
+    - Thanks
+    - Thank you
+    - Thank you so much
+    - Thanks bot
+    - Thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - thanks!
+    - Cool. Thanks
+    - thanks this is great news
+    - great thanks
+    - cool thanks
+    - thanks for forum link, I'll check it out
+    - alright, thank you
+- intent: help
+  examples: |
+    - help
+    - what can you do?
+    - what can I ask you?
+    - what do you do?
+    - what can you help me with?
+    - help me
+    - help, what do you do
+    - how do I use this
+    - how can you help me
+    - What are the things that you can do?
+- intent: human_handoff
+  examples: |
+    - handoff
+    - operator
+    - I want a human
+    - can I speak to an agent
+    - real agent please
+    - real human
+    - chat with a live agent
+    - give me a person please
+    - i want to talk to a human
+    - transfer to a human
+    - Please give me to a human
+- intent: out_of_scope
+  examples: |
+    - what is the square root of 5
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - I want pizza
+    - please help with my ice cream it's dripping
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    - i want a non dripping ice cream
+    - hey little mama let em whisper in your ear
+    - someone call the police i think the bot died
+    - show me a picture of a chicken
+    - neither
+    - I want french cuisine
+    - i am hungry
+    - you're a loser lmao
+    - can i be shown a gluten free restaurant
+    - i don't care!!!!
+    - i do not care how are you
+    - again?
+    - oh wait i gave you my work email address can i change it?
+    - hang on let me find it
+    - stop it, i do not care!!!
+    - really? you're so touchy?
+    - how come?
+    - I changed my mind
+    - what?
+    - did i break you
+    - I don't wanna tell the name of my company
+    - that link doesn't work!
+    - you already have that
+    - this is a really frustrating experience
+    - no stop
+    - i want a french restaurant
+    - shit bot
+    - do you want to marry me?
+    - give me food
+    - i want food
+    - udo, I want to marry you
+    - i wanna party
+    - shitmuncher
+    - I like you
+    - i want pizza
+    - i want pizza!!
+    - silly bot
+    - i want to eat
+    - you are a stupid bot
+    - i hate you
+    - Can I ask you questions first?
+    - is it a wasteland full of broken robot parts?
+    - i can't deal with _your_ request
+    - are you vegan
+    - who will answer my email?
+    - do you sell vacuum robots?
+    - i want to buy a roomba for my grandson
+    - and make chicken noises into the phone
+    - is barbara still married to you
+    - what's your wife doing this weekend
+    - how are the kids
+    - you're rather dull
+    - personal or work?
+    - are you using Rasa Core and NLU ?
+    - tell me a joke
+    - what else?
+    - I already told you! I'm a shitmuncher
+    - I'm a shitmuncher
+    - who are the engineers at rasa?
+    - who are they?
+    - can we keep chatting?
+    - talk to me
+    - who is your favourite robot?
+    - a tamed mouse will arrive at your doorstep in the next couple of days
+    - you will know it from the single red rose it carries between its teeth
+    - i will tame a mouse for you
+    - isn't the newsletter just spam?
+    - go back
+    - can you help me with the docs?
+    - sorry, i cannot rephrase
+    - and your REST API doesn't work
+    - i told you already
+    - better than you
+    - oh my god, not again!
+    - you are a badass bot!
+    - lol
+    - why do you need that?
+    - is that any of your business
+    - can you help me with your docs?
+    - i immediately need help with implementing the coolest bot you can imagine
+    - can you help me with your docs
+    - can you tell me how to build a bot?
+    - can you learn from our conversation?
+    - common, just try
+    - hey, I contacted you a couple of days ago but didn't get any response, any news?
+    - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
+    - you are annoying
+    - Do I have to accept?
+    - Is Rasa really smart?
+    - kannst du auch deutsch?
+    - are the newsletter worth the subscription?
+    - it's a pity
+    - i want more of you in my life!
+    - the one that is better than you
+    - you suck
+    - bots are bad
+    - i dont like bots
+    - do you have a phone number?
+    - where do you live?
+    - how are akela's cats doing?
+    - but I just told you that :(
+    - Why don’t you answer?
+    - But you're an english site :(
+    - can you help me to build a bot
+- intent: ask_weather
+  examples: |
+    - The weather condition for [London](location)
+    - For [Ekiti](location)
+    - [Ondo](location)
+    - [California](location)
+    - Condition for [Akure city](location)
+    - [Ekiti](location) weather.
+    - what is the weather condition of [Akure](location)
+    - tell me the current weather of [Abuja](location)
+    - what is the weather in [Lagos](location)
+    - I want to check for the weather.
+    - check for the weather right now.
+    - get deatail about the current.
+    - Check the weather for me pls.
+    - I want to check the weather
+    - [Lekki](location)
+    - the location is [Tokyo](location)
+    - this is the location [Uganda](location)
+    - that is the location [Ilawe Ekiti](location)
+    - try this one [Ijebu ode](location)
+    - what about this [Owo](location)
+    - tell the humidity of [Akure](location)
+    - what is the temperature of [CA](location)
+    - what is the wind speed of [Ore](location)
+- intent: mood_great
+  examples: |
+    - I am doing great
+    - I am absolutely alright
+    - I am fine
+    - I am happy. How about you
+    - fine
+    - alright
+    - good
+    - going good
+    - doing good
+    - happy
+    - superb
+    - All good. How are you?
+    - great
+    - doing great
+    - I am good
+    - absolutely fine
+    - not so bad
+    - am good
+    - doing great atleast
+    - am fine
+    - I'm fine
+    - I'm really doing great
+    - I'm happy.
+    - I'm alright
+    - am alright
+    - am really good
+    - doing fine
+    - not so bad afterall
+    - am not so bad 
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - you're a bot right?
+    - you are a bot?
+    - you must be a bot?
+- intent: ask_bot_name
+  examples: |
+    - what is your name?
+    - got a name?
+    - your name?
+    - your name pls?
+    - should i call you bot?
+    - I will be calling you bot?
+    - what can i call you?
+- intent: ask_bot_developed_date
+  examples: |
+    - when where you created?
+    - what is your birthday?
+    - when where you made?
+    - your birthdate?
+- intent: ask_something_else
+  examples: |
+    - can you polish a shoe?
+    - can you run?
+    - can you watch the TV?
+    - is there anything else you can do?
+    - can you see me?
+    - are there anything else you can do?
+    - what else can you do?
+    - anything else that you can do?
+    - what can you do aside this?
+    - what else can you do now?
+    - can you make phone call?
+    - can you talk like human?
+    - can you speak to my daughter?
+    - can you be my boyfriend?
+    - can you drive my car?
+    - can you go out of the internet
+    - will you come to me?
+    - will you be my bestie?
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: ask_bot_developer
+  examples: |
+    - who is your developer?
+    - who program you?
+    - who programmed you?
+    - you're developed by?
+    - who made you?
+    - who code you up?
+    - who created you and your component?

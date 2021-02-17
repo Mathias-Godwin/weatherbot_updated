@@ -1,0 +1,148 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- thank_you:
+    use_entities: true
+- ask_weather:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- greet:
+    use_entities: true
+- help:
+    use_entities: true
+- affirm:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- human_handoff:
+    use_entities: true
+- deny:
+    use_entities: true
+- ask_bot_developer:
+    use_entities: true
+- ask_bot_developed_date:
+    use_entities: true
+- ask_bot_name:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_something_else:
+    use_entities: true
+entities:
+- location
+slots:
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hello 😃 How can I help you?
+  - text: Yay!😇 Can I help you?
+  - text: "Hey! How are you?"
+  - text: "Hi!"
+  - text: "Yo! my friend!"
+  - text: "Yeah, howdy!"
+  - text: "Hello there!"
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye bye 😔
+  - text: Have a great day, hope I was of help today 😐
+  utter_ask_location:
+  - text: In what location 🌍 ?
+  - text: Can I know the location?
+  - text: What location actually 🗺?
+  utter_thank_you:
+  - text: Oh, it alright 😎
+  - text: You're welcome.
+  - text: It's pleasure
+  utter_ok:
+  - text: Ok then 👍
+  - text: Alright.
+  utter_how_can_help:
+  - text: I can help you get the WEATHER condition of a particular place.
+  - text: |-
+      You can ask me... 
+       What is the weather condition of Lekki 
+       e.t.c 
+  utter_out_of_scope:
+  - text: Don't know how to answer that, can you be a bit specific?
+  - text: Can you rephrase please?
+  utter_default:
+  - text: Question kinda out of my scope, pls rephrase
+  - text: Didn't really understand, rephrase that pls 😐
+  - text: I don't get it, how about rephrasing it ☺
+  utter_anything_else:
+  - text: Is there anything else I can help you with again?
+  - text: Do you need help again?
+  - text: What can I help you with again?
+  utter_cheer_up:
+  - text: "Here is something to cheer you up, Just don't be down upon yourself.:"
+    image: "https://i.imgur.com/qLo0ztc.jpg"
+  - text: "Sometimes we feel lost and lonely but behold Their are still people who cares about us...\n You might like this:"
+    image: https://i.imgur.com/f0lfM8w.png
+  - text: "This really helps, Try connecting with any of your friends:"
+    image: https://i.imgur.com/5rEdqPi.jpg
+  - text: "Quotes help to recover sometimes, here is one:"
+    image: https://i.imgur.com/usF6y4F.png
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: I hope it helps 😐
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: Very good, carry on pls!
+  utter_not_really:
+  - text: I'd be very happy if I could 😎.
+  - text: I'm not sure if I can... working towards that actually.
+  - text: I might be very soon!
+  - text: I'm that perfect yet... working towards that.
+  utter_iamabot:
+  - text: "I am a bot for sure."
+  - text: "Yeah, I'm a bot powered by everyone... including you 🙂"
+  utter_bot_name:
+  - text: I'm Gwin by name, I still don't know why I bear that name.
+  - text: Call me Gwin.
+  - text: My friends call me Gwin... it ok if you do too.
+  utter_bot_developer:
+  - text: "
+        \n...
+        \nname: Mathias Godwin.
+        \nEmail: godwinsaint6@gmail.com
+        \nPhone: +2347061009672
+        \n 
+        You can reach him on... Facebook(Brailey Gwin), Twitter(@godwinsaint6), Email(godwinsaint6@gmail.com).
+        "
+  - text: "
+        \n...
+        \nWell! the big answer is, I'm been developed by
+        \nMathias Godwin, A scare face man from Nigeria.
+        \nI've tried to asking him about where to find him and got this...
+        \nFacebook(Brailey Gwin), Phone(+2347061009672), Email(godwinsaint6@gmail.com).
+        "
+  - text: "
+        \n...
+        \nHis full name is Mathias Godwin, Email(godwinsaint6@gmail.com), Phone(+2347061009672).
+        \nHe also love people calling him 'Gwin' like me... crazy huh 😎.
+        "
+  utter_bot_developed_date:
+  - text: Well, I guess May 5, don't ask me the year cuz you won't believe it.
+  - text: May 5 if I could remember, don't ask me the year 🤠
+
+actions:
+- action_weather
+- utter_ask_location
+- utter_goodbye
+- utter_greet
+- utter_thank_you
+forms: {}
+e2e_actions: []

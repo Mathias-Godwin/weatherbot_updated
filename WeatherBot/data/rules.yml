@@ -1,0 +1,67 @@
+rules:
+
+- rule: Say good bye anytime the user says good bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- rule: Say "I am a bot" anytime the user request for intent
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say bot name anytime user request for intent
+  steps:
+  - intent: ask_bot_name
+  - action: utter_bot_name
+
+- rule: Say bot developer anytime user request for it
+  steps:
+  - intent: ask_bot_developer
+  - action: utter_bot_developer
+
+- rule: Say bot developed time anytime user request for it
+  steps:
+  - intent: ask_bot_developed_date
+  - action: utter_bot_developed_date
+  
+- rule: Say mood happy anytime user utter happy word
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+ 
+- rule: Say mood sad anytime user utter sad word
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  
+- rule: Say what can do anytime the user request for it
+  steps:
+  - intent: help
+  - action: utter_how_can_help
+
+- rule: Say "hello" whenever the user sends a message with intent `greet`
+  steps:
+  - intent: greet
+  - action: utter_greet
+ 
+- rule: Say happy whenever the user affirm
+  steps:
+  - intent: affirm
+  - action: utter_happy
+
+- rule: Say cheer up whenever the user is deny
+  steps:
+  - intent: deny
+  - action: utter_ok
+
+- rule: Say No to anything outside the scope
+  steps:
+  - intent: ask_something_else
+  - action: utter_not_really
+
+- rule: Say No to anything outside the scope
+  steps:
+  - intent: help
+  - action: utter_how_can_help
