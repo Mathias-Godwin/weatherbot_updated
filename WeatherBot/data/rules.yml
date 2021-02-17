@@ -41,10 +41,6 @@ rules:
   - intent: help
   - action: utter_how_can_help
 
-- rule: Say "hello" whenever the user sends a message with intent `greet`
-  steps:
-  - intent: greet
-  - action: utter_greet
  
 - rule: Say happy whenever the user affirm
   steps:

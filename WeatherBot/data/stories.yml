@@ -13,8 +13,6 @@ stories:
   - action: action_weather
   - intent: thank_you
   - action: utter_thank_you
-  - intent: goodbye
-  - action: utter_goodbye
   - action: action_restart
 
 - story: interactive_story_1
@@ -27,8 +25,6 @@ stories:
   - slot_was_set:
     - location: Lagos
   - action: action_weather
-  - intent: goodbye
-  - action: utter_goodbye
   - action: action_restart
 
 - story: interactive_story_2
@@ -65,7 +61,6 @@ stories:
   - intent: thank_you
   - action: utter_thank_you
   - action: utter_anything_else
-  - action: utter_goodbye
   - action: action_restart
   
 - story: story 5
