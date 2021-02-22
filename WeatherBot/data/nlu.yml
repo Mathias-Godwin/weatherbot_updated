@@ -372,6 +372,12 @@ nlu:
     - tell the humidity of [Akure](location)
     - what is the temperature of [CA](location)
     - what is the wind speed of [Ore](location)
+    - [New york city](city)
+    - [Lekki island](location)
+    - what is the weather condition of [Akure city](location)
+    - check the weather of this location [Ise Ekiti](location)
+    - [Tokyo](location)
+    - [Nigeria](location)
 - intent: mood_great
   examples: |
     - I am doing great
@@ -428,6 +434,8 @@ nlu:
     - you're a bot right?
     - you are a bot?
     - you must be a bot?
+    - you must be a robot
+    - are you not a robot?
 - intent: ask_bot_name
   examples: |
     - what is your name?
@@ -437,6 +445,7 @@ nlu:
     - should i call you bot?
     - I will be calling you bot?
     - what can i call you?
+    - do you have a name?
 - intent: ask_bot_developed_date
   examples: |
     - when where you created?
@@ -472,6 +481,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - na
 - intent: ask_bot_developer
   examples: |
     - who is your developer?
@@ -481,3 +491,4 @@ nlu:
     - who made you?
     - who code you up?
     - who created you and your component?
+    - someone must have built you

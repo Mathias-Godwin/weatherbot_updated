@@ -61,9 +61,9 @@ To run your assistant in a interactive learning session, run:
 
 I will do my best to keep this repo up-to-date, but if you encounter any issues with using the code, please raise an issue or drop me a message :)
 
-Latest code update: 18/02/2021
+Latest code update: 31/04/2020
 
-Latest compatible Rasa version: 2.2.3
+Latest compatible Rasa version: 1.9.6
 
 
 

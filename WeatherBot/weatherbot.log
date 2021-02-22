@@ -1,0 +1,51 @@
+2021-02-19 21:37:15,469 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-02-19 21:37:15,484 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-02-19 21:37:15,499 [DEBUG]  Using the default number of Sanic workers (1).
+2021-02-19 21:37:15,504 [INFO ]  Loading model models\20210217-043518.tar.gz...
+2021-02-19 21:37:20,346 [DEBUG]  Extracted model to 'C:\Users\Godwi\AppData\Local\Temp\tmp6xxa3gk6'.
+2021-02-19 21:37:20,627 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-02-19 21:37:26,678 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-02-19 21:37:26,757 [INFO ]  Enabling coroutine debugging. Loop id 1356581731152.
+2021-02-19 21:37:26,766 [INFO ]  Loading model models\20210217-043518.tar.gz...
+2021-02-19 21:37:28,753 [DEBUG]  Extracted model to 'C:\Users\Godwi\AppData\Local\Temp\tmpj1hdac6j'.
+2021-02-19 21:37:39,575 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en_core_web_sm'.
+2021-02-19 21:37:40,701 [DEBUG]  Loading the model from C:\Users\Godwi\AppData\Local\Temp\tmpj1hdac6j\nlu\component_7_DIETClassifier.tf_model with finetune_mode=False...
+2021-02-19 21:37:41,367 [DEBUG]  Following metrics will be logged during training: 
+2021-02-19 21:37:41,372 [DEBUG]    t_loss (total loss)
+2021-02-19 21:37:41,373 [DEBUG]    i_acc (intent acc)
+2021-02-19 21:37:41,373 [DEBUG]    i_loss (intent loss)
+2021-02-19 21:37:41,377 [DEBUG]    e_f1 (entity f1)
+2021-02-19 21:37:41,377 [DEBUG]    e_loss (entity loss)
+2021-02-19 21:37:46,010 [DEBUG]  Finished loading the model.
+2021-02-19 21:37:46,026 [DEBUG]  Building tensorflow prediction graph...
+2021-02-19 21:38:00,243 [DEBUG]  Finished building tensorflow prediction graph.
+2021-02-19 21:38:00,476 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-02-19 21:38:00,490 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-02-19 21:38:02,661 [DEBUG]  Extracted model to 'C:\Users\Godwi\AppData\Local\Temp\tmpqfm94yvp'.
+2021-02-19 21:38:03,595 [DEBUG]  Loading the model from C:\Users\Godwi\AppData\Local\Temp\tmpqfm94yvp\core\policy_1_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2021-02-19 21:38:05,561 [DEBUG]  Finished loading the model.
+2021-02-19 21:38:05,578 [DEBUG]  Building tensorflow prediction graph...
+2021-02-19 21:39:26,970 [DEBUG]  Finished building tensorflow prediction graph.
+2021-02-19 21:39:29,186 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-02-19 21:39:29,218 [INFO ]  Rasa server is up and running.

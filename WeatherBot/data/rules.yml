@@ -28,7 +28,7 @@ rules:
 - rule: Say mood happy anytime user utter happy word
   steps:
   - intent: mood_great
-  - action: utter_happy
+  - action: utter_mood_great
  
 - rule: Say mood sad anytime user utter sad word
   steps:
@@ -61,3 +61,8 @@ rules:
   steps:
   - intent: help
   - action: utter_how_can_help
+
+- rule: Say mood_great anytime the user mood_great
+  steps:
+  - intent: greet
+  - action: utter_mood_great

@@ -1,0 +1,971 @@
+2021-02-17 19:53:50,821 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-02-17 19:53:50,829 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-02-17 19:53:50,829 [DEBUG]  Using the default number of Sanic workers (1).
+2021-02-17 19:53:50,845 [INFO ]  Loading model models\20210217-043518.tar.gz...
+2021-02-17 19:53:55,939 [DEBUG]  Extracted model to 'C:\Users\Godwi\AppData\Local\Temp\tmp6aj6064s'.
+2021-02-17 19:53:56,312 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-02-17 19:53:56,352 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001600248A220>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2021-02-17 19:53:56,372 [INFO ]  Enabling coroutine debugging. Loop id 1511866677952.
+2021-02-17 19:53:56,372 [INFO ]  Loading model models\20210217-043518.tar.gz...
+2021-02-17 19:53:57,456 [DEBUG]  Extracted model to 'C:\Users\Godwi\AppData\Local\Temp\tmpfwvzgbiu'.
+2021-02-17 19:54:02,731 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en_core_web_sm'.
+2021-02-17 19:54:04,144 [DEBUG]  Loading the model from C:\Users\Godwi\AppData\Local\Temp\tmpfwvzgbiu\nlu\component_7_DIETClassifier.tf_model with finetune_mode=False...
+2021-02-17 19:54:04,922 [DEBUG]  Following metrics will be logged during training: 
+2021-02-17 19:54:04,922 [DEBUG]    t_loss (total loss)
+2021-02-17 19:54:04,930 [DEBUG]    i_acc (intent acc)
+2021-02-17 19:54:04,931 [DEBUG]    i_loss (intent loss)
+2021-02-17 19:54:04,931 [DEBUG]    e_f1 (entity f1)
+2021-02-17 19:54:04,931 [DEBUG]    e_loss (entity loss)
+2021-02-17 19:54:08,810 [DEBUG]  Finished loading the model.
+2021-02-17 19:54:08,818 [DEBUG]  Building tensorflow prediction graph...
+2021-02-17 19:54:23,092 [DEBUG]  Finished building tensorflow prediction graph.
+2021-02-17 19:54:23,142 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-02-17 19:54:23,142 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-02-17 19:54:28,471 [DEBUG]  Extracted model to 'C:\Users\Godwi\AppData\Local\Temp\tmpmj4ifnbd'.
+2021-02-17 19:54:28,961 [DEBUG]  Loading the model from C:\Users\Godwi\AppData\Local\Temp\tmpmj4ifnbd\core\policy_1_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2021-02-17 19:54:30,112 [DEBUG]  Finished loading the model.
+2021-02-17 19:54:30,132 [DEBUG]  Building tensorflow prediction graph...
+2021-02-17 19:54:44,106 [DEBUG]  Finished building tensorflow prediction graph.
+2021-02-17 19:54:44,220 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-02-17 19:54:44,228 [INFO ]  Rasa server is up and running.
+2021-02-17 19:56:13,898 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:13,932 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:13,932 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:13,942 [DEBUG]  Could not find tracker for conversation ID '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:13,961 [DEBUG]  Starting a new session for conversation ID '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:14,127 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:56:14,132 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x0000016008E69490>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 19:56:14,132 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 19:56:14,442 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 19:56:16,860 [DEBUG]  Received user message 'hi there!' with intent '{'id': 1450572001171935847, 'name': 'greet', 'confidence': 0.9999935626983643}' and entities '[]'
+2021-02-17 19:56:16,868 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-02-17 19:56:16,880 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-02-17 19:56:16,888 [DEBUG]  There is a memorised next action 'utter_greet'
+2021-02-17 19:56:16,973 [DEBUG]  Current tracker state:
+[state 1] user text: hi there! | previous action name: action_listen
+2021-02-17 19:56:16,981 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:16,981 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-02-17 19:56:16,981 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:16,993 [DEBUG]  Made prediction using user intent.
+2021-02-17 19:56:16,993 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 19:56:16,993 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:56:16,993 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2021-02-17 19:56:17,009 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600EEFECD0>]'.
+2021-02-17 19:56:17,017 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hi!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1613620577.0091136)]'.
+2021-02-17 19:56:17,017 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-02-17 19:56:17,025 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 19:56:17,049 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-02-17 19:56:17,049 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:17,057 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:56:17,057 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 19:56:17,065 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:56:17,065 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 19:56:17,065 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:35,044 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:35,051 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:35,051 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:35,059 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 19:56:35,181 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 19:56:35,582 [DEBUG]  Received user message 'I want to check the weather pls' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9999558329582214}' and entities '[]'
+2021-02-17 19:56:35,592 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2021-02-17 19:56:35,597 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+2021-02-17 19:56:35,601 [DEBUG]  There is a memorised next action 'utter_ask_location'
+2021-02-17 19:56:35,632 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: I want to check the weather pls | previous action name: action_listen
+2021-02-17 19:56:35,632 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:35,640 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+2021-02-17 19:56:35,644 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:35,644 [DEBUG]  Made prediction using user intent.
+2021-02-17 19:56:35,644 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 19:56:35,644 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:56:35,644 [DEBUG]  Predicted next action 'utter_ask_location' with confidence 1.00.
+2021-02-17 19:56:35,654 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600246B760>]'.
+2021-02-17 19:56:35,656 [DEBUG]  Action 'utter_ask_location' ended with events '[BotUttered('In what location 🌍 ?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_location"}, 1613620595.6543028)]'.
+2021-02-17 19:56:35,662 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 19:56:35,662 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 19:56:35,682 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 19:56:35,682 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:35,691 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:56:35,694 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 19:56:35,697 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:56:35,697 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 19:56:35,701 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:55,449 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:55,481 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:55,492 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:56:55,500 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 19:56:55,599 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 19:56:55,712 [DEBUG]  Inconsistent BILOU tagging found, B- tag, L- tag pair encloses multiple entity classes.i.e. [B-a, I-b, L-a] instead of [B-a, I-a, L-a].
+Assuming B- class is correct.
+2021-02-17 19:56:55,712 [DEBUG]  Inconsistent BILOU tagging found, B- tag not closed by L- tag, i.e [B-a, I-a, O] instead of [B-a, L-a, O].
+Assuming last tag is L- instead of I-.
+2021-02-17 19:56:55,720 [DEBUG]  The difference in NLU confidences for the top two intents (0.09357908368110657) is lower than the ambiguity threshold 0.10. Predicting intent 'nlu_fallback' instead of 'out_of_scope'.
+2021-02-17 19:56:55,721 [DEBUG]  Received user message 'well, Akure i guess' with intent '{'name': 'nlu_fallback', 'confidence': 0.49148988723754883}' and entities '[{'entity': 'location', 'start': 6, 'end': 11, 'confidence_entity': 0.6510488390922546, 'value': 'Akure', 'extractor': 'DIETClassifier'}]'
+2021-02-17 19:56:55,730 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 19:56:55,730 [DEBUG]  Logged UserUtterance - tracker now has 15 events.
+2021-02-17 19:56:55,730 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet
+[state 2] user intent: ask_weather | previous action name: action_listen
+[state 3] user intent: ask_weather | previous action name: utter_ask_location
+[state 4] user intent: nlu_fallback | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 19:56:55,738 [DEBUG]  Launch DeLorean...
+2021-02-17 19:56:55,738 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'nlu_fallback', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-02-17 19:56:55,746 [DEBUG]  There is no memorised next action
+2021-02-17 19:56:55,778 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user text: well, Akure i guess | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 19:56:55,783 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:55,783 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: nlu_fallback | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 19:56:55,783 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:55,783 [DEBUG]  Made prediction using user intent.
+2021-02-17 19:56:55,783 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 19:56:55,783 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-02-17 19:56:55,791 [DEBUG]  Predicted next action 'action_default_fallback' with confidence 0.30.
+2021-02-17 19:56:55,792 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016009FA96A0>]'.
+2021-02-17 19:56:55,792 [DEBUG]  Action 'action_default_fallback' ended with events '[BotUttered('I don't get it, how about rephrasing it ☺', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_default"}, 1613620615.792942), <rasa.shared.core.events.UserUtteranceReverted object at 0x0000016012164AC0>]'.
+2021-02-17 19:56:55,800 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 19:56:55,800 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 19:56:55,800 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 19:56:55,823 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 19:56:55,831 [DEBUG]  There is no applicable rule.
+2021-02-17 19:56:55,833 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:56:55,833 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 19:56:55,833 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:56:55,833 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 19:56:55,841 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:57:05,762 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:57:05,770 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:57:05,770 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:57:05,770 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 19:57:05,796 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 19:57:05,852 [DEBUG]  Received user message 'Akure' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9784446954727173}' and entities '[{'entity': 'location', 'start': 0, 'end': 5, 'confidence_entity': 0.6886002421379089, 'value': 'Akure', 'extractor': 'DIETClassifier'}]'
+2021-02-17 19:57:05,852 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 19:57:05,852 [DEBUG]  Logged UserUtterance - tracker now has 22 events.
+2021-02-17 19:57:05,863 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet
+[state 2] user intent: ask_weather | previous action name: action_listen
+[state 3] user intent: ask_weather | previous action name: utter_ask_location
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 19:57:05,863 [DEBUG]  There is a memorised next action 'action_weather'
+2021-02-17 19:57:05,897 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user text: Akure | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 19:57:05,897 [DEBUG]  There is no applicable rule.
+2021-02-17 19:57:05,905 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 19:57:05,905 [DEBUG]  There is no applicable rule.
+2021-02-17 19:57:05,905 [DEBUG]  Made prediction using user intent.
+2021-02-17 19:57:05,905 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 19:57:05,911 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:57:05,911 [DEBUG]  Predicted next action 'action_weather' with confidence 1.00.
+2021-02-17 19:57:05,911 [DEBUG]  Calling action endpoint to run action 'action_weather'.
+2021-02-17 19:57:05,922 [DEBUG]  The URL 'http://localhost:5002/webhook/' has a trailing slash. Please make sure the target server supports trailing slashes for this endpoint.
+2021-02-17 19:57:08,587 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016012166C70>]'.
+2021-02-17 19:57:08,592 [DEBUG]  Action 'action_weather' ended with events '[BotUttered('It is currently Normal in Akure at the moment. The temperature is 23c degrees, the humidity is Null% and the wind speed is Null mph.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1613620628.5877151), <rasa.shared.core.events.SlotSet object at 0x00000160087092B0>]'.
+2021-02-17 19:57:08,592 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 19:57:08,599 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 19:57:08,599 [DEBUG]  Launch DeLorean...
+2021-02-17 19:57:08,607 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_weather'}}]
+2021-02-17 19:57:08,607 [DEBUG]  There is a memorised next action 'action_restart'
+2021-02-17 19:57:08,650 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 6] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 19:57:08,650 [DEBUG]  There is no applicable rule.
+2021-02-17 19:57:08,650 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 19:57:08,650 [DEBUG]  Predicted next action 'action_restart' with confidence 1.00.
+2021-02-17 19:57:08,650 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:57:08,658 [DEBUG]  Action 'action_restart' ended with events '[<rasa.shared.core.events.Restarted object at 0x0000016012168880>]'.
+2021-02-17 19:57:08,663 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 19:57:08,663 [DEBUG]  Predicted next action 'action_session_start' with confidence 1.00.
+2021-02-17 19:57:08,663 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:57:08,663 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x0000016008757790>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 19:57:08,663 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 19:57:08,671 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:58:18,833 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:58:18,852 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:58:18,852 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 19:58:18,862 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 19:58:18,960 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 19:58:19,122 [DEBUG]  Received user message 'alright then' with intent '{'id': 6984861129314946429, 'name': 'mood_great', 'confidence': 0.8742915987968445}' and entities '[]'
+2021-02-17 19:58:19,144 [DEBUG]  Logged UserUtterance - tracker now has 32 events.
+2021-02-17 19:58:19,152 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+2021-02-17 19:58:19,152 [DEBUG]  Launch DeLorean...
+2021-02-17 19:58:19,152 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'mood_great'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-02-17 19:58:19,161 [DEBUG]  There is no memorised next action
+2021-02-17 19:58:19,202 [DEBUG]  Current tracker state:
+[state 1] user text: alright then | previous action name: action_listen
+2021-02-17 19:58:19,202 [DEBUG]  There is no applicable rule.
+2021-02-17 19:58:19,202 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+2021-02-17 19:58:19,210 [DEBUG]  There is a rule for the next action 'utter_happy'.
+2021-02-17 19:58:19,210 [DEBUG]  Made prediction using user intent.
+2021-02-17 19:58:19,210 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 19:58:19,210 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-02-17 19:58:19,218 [DEBUG]  Predicted next action 'utter_happy' with confidence 1.00.
+2021-02-17 19:58:19,227 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016012164820>]'.
+2021-02-17 19:58:19,227 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_happy"}, 1613620699.2269294)]'.
+2021-02-17 19:58:19,231 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+2021-02-17 19:58:19,231 [DEBUG]  Launch DeLorean...
+2021-02-17 19:58:19,231 [DEBUG]  Current tracker state [{}, {'prev_action': {'action_name': 'utter_happy'}}]
+2021-02-17 19:58:19,231 [DEBUG]  There is no memorised next action
+2021-02-17 19:58:19,252 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+2021-02-17 19:58:19,252 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-02-17 19:58:19,252 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-02-17 19:58:19,260 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 19:58:19,260 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 19:58:19,260 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 19:58:19,268 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:07,847 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:07,872 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:07,880 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:07,884 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:05:08,249 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:05:09,179 [DEBUG]  Received user message 'hello there!' with intent '{'id': 1450572001171935847, 'name': 'greet', 'confidence': 0.9999938011169434}' and entities '[]'
+2021-02-17 20:05:09,195 [DEBUG]  Logged UserUtterance - tracker now has 37 events.
+2021-02-17 20:05:09,208 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+2021-02-17 20:05:09,220 [DEBUG]  Launch DeLorean...
+2021-02-17 20:05:09,221 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-02-17 20:05:09,229 [DEBUG]  There is a memorised next action 'utter_greet'
+2021-02-17 20:05:09,308 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user text: hello there! | previous action name: action_listen
+2021-02-17 20:05:09,316 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:09,319 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+2021-02-17 20:05:09,321 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:09,321 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:05:09,329 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:05:09,329 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:05:09,329 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2021-02-17 20:05:09,351 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016012166FD0>]'.
+2021-02-17 20:05:09,351 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1613621109.3517025)]'.
+2021-02-17 20:05:09,364 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+2021-02-17 20:05:09,379 [DEBUG]  Launch DeLorean...
+2021-02-17 20:05:09,380 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}]
+2021-02-17 20:05:09,380 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:05:09,408 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+2021-02-17 20:05:09,408 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:09,416 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:05:09,416 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:05:09,416 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:05:09,420 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:05:09,428 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:23,217 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:23,221 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:23,221 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:23,221 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:05:23,278 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:05:23,390 [DEBUG]  Received user message 'fine, I want to check the weather' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9998615384101868}' and entities '[]'
+2021-02-17 20:05:23,390 [DEBUG]  Logged UserUtterance - tracker now has 42 events.
+2021-02-17 20:05:23,398 [DEBUG]  Current tracker state:
+[state 0] user intent: mood_great | previous action name: action_listen
+[state 1] user intent: mood_great | previous action name: utter_happy
+[state 2] user intent: greet | previous action name: action_listen
+[state 3] user intent: greet | previous action name: utter_greet
+[state 4] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:05:23,398 [DEBUG]  Launch DeLorean...
+2021-02-17 20:05:23,410 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'ask_weather'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-02-17 20:05:23,410 [DEBUG]  There is a memorised next action 'utter_ask_location'
+2021-02-17 20:05:23,438 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+[state 5] user text: fine, I want to check the weather | previous action name: action_listen
+2021-02-17 20:05:23,438 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:23,438 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+[state 5] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:05:23,446 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:23,446 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:05:23,449 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:05:23,450 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:05:23,450 [DEBUG]  Predicted next action 'utter_ask_location' with confidence 1.00.
+2021-02-17 20:05:23,450 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x00000160062F23A0>]'.
+2021-02-17 20:05:23,458 [DEBUG]  Action 'utter_ask_location' ended with events '[BotUttered('In what location 🌍 ?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_location"}, 1613621123.4507565)]'.
+2021-02-17 20:05:23,458 [DEBUG]  Current tracker state:
+[state 0] user intent: mood_great | previous action name: utter_happy
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:05:23,466 [DEBUG]  Launch DeLorean...
+2021-02-17 20:05:23,469 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'ask_weather'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_weather'}, 'prev_action': {'action_name': 'utter_ask_location'}}]
+2021-02-17 20:05:23,470 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:05:23,493 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+[state 5] user intent: ask_weather | previous action name: action_listen
+[state 6] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:05:23,500 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:23,500 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:05:23,508 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:05:23,508 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:05:23,508 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:05:23,523 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:41,529 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:41,542 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:41,542 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:05:41,542 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:05:41,627 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:05:41,700 [DEBUG]  Received user message 'well, the location is Akure' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9999020099639893}' and entities '[{'entity': 'location', 'start': 22, 'end': 27, 'confidence_entity': 0.9314622282981873, 'value': 'Akure', 'extractor': 'DIETClassifier'}]'
+2021-02-17 20:05:41,710 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 20:05:41,710 [DEBUG]  Logged UserUtterance - tracker now has 48 events.
+2021-02-17 20:05:41,710 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet
+[state 2] user intent: ask_weather | previous action name: action_listen
+[state 3] user intent: ask_weather | previous action name: utter_ask_location
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:05:41,710 [DEBUG]  There is a memorised next action 'action_weather'
+2021-02-17 20:05:41,750 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+[state 5] user intent: ask_weather | previous action name: action_listen
+[state 6] user intent: ask_weather | previous action name: utter_ask_location
+[state 7] user text: well, the location is Akure | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:05:41,750 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:41,750 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+[state 5] user intent: ask_weather | previous action name: action_listen
+[state 6] user intent: ask_weather | previous action name: utter_ask_location
+[state 7] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:05:41,758 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:41,758 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:05:41,758 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:05:41,766 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:05:41,766 [DEBUG]  Predicted next action 'action_weather' with confidence 1.00.
+2021-02-17 20:05:41,770 [DEBUG]  Calling action endpoint to run action 'action_weather'.
+2021-02-17 20:05:41,770 [DEBUG]  The URL 'http://localhost:5002/webhook/' has a trailing slash. Please make sure the target server supports trailing slashes for this endpoint.
+2021-02-17 20:05:44,819 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600653FFD0>]'.
+2021-02-17 20:05:44,827 [DEBUG]  Action 'action_weather' ended with events '[BotUttered('It is currently Normal in Akure at the moment. The temperature is 23c degrees, the humidity is Null% and the wind speed is Null mph.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1613621144.8196237), <rasa.shared.core.events.SlotSet object at 0x000001600875B970>]'.
+2021-02-17 20:05:44,827 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 20:05:44,827 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:05:44,827 [DEBUG]  Launch DeLorean...
+2021-02-17 20:05:44,835 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_weather'}}]
+2021-02-17 20:05:44,840 [DEBUG]  There is a memorised next action 'action_restart'
+2021-02-17 20:05:44,871 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+[state 5] user intent: ask_weather | previous action name: action_listen
+[state 6] user intent: ask_weather | previous action name: utter_ask_location
+[state 7] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 8] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:05:44,879 [DEBUG]  There is no applicable rule.
+2021-02-17 20:05:44,880 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:05:44,880 [DEBUG]  Predicted next action 'action_restart' with confidence 1.00.
+2021-02-17 20:05:44,880 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:05:44,880 [DEBUG]  Action 'action_restart' ended with events '[<rasa.shared.core.events.Restarted object at 0x000001600653E7F0>]'.
+2021-02-17 20:05:44,887 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:05:44,887 [DEBUG]  Predicted next action 'action_session_start' with confidence 1.00.
+2021-02-17 20:05:44,887 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:05:44,887 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x000001600875B340>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 20:05:44,895 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:05:44,899 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:07:50,699 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:07:50,721 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:07:50,721 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:07:50,729 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:07:50,967 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:07:51,369 [DEBUG]  Received user message 'check the weather for Akure' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9999902844429016}' and entities '[{'entity': 'location', 'start': 22, 'end': 27, 'confidence_entity': 0.9261709451675415, 'value': 'Akure', 'extractor': 'DIETClassifier'}]'
+2021-02-17 20:07:51,379 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 20:07:51,379 [DEBUG]  Logged UserUtterance - tracker now has 59 events.
+2021-02-17 20:07:51,397 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:07:51,397 [DEBUG]  There is a memorised next action 'action_weather'
+2021-02-17 20:07:51,471 [DEBUG]  Current tracker state:
+[state 1] user text: check the weather for Akure | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:07:51,479 [DEBUG]  There is no applicable rule.
+2021-02-17 20:07:51,479 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:07:51,479 [DEBUG]  There is no applicable rule.
+2021-02-17 20:07:51,492 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:07:51,492 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:07:51,492 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:07:51,492 [DEBUG]  Predicted next action 'action_weather' with confidence 1.00.
+2021-02-17 20:07:51,506 [DEBUG]  Calling action endpoint to run action 'action_weather'.
+2021-02-17 20:07:51,506 [DEBUG]  The URL 'http://localhost:5002/webhook/' has a trailing slash. Please make sure the target server supports trailing slashes for this endpoint.
+2021-02-17 20:07:54,042 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600653EA60>]'.
+2021-02-17 20:07:54,042 [DEBUG]  Action 'action_weather' ended with events '[<rasa.shared.core.events.SlotSet object at 0x0000016008885B80>]'.
+2021-02-17 20:07:54,050 [DEBUG]  Current slot values: 
+	location: Akure
+2021-02-17 20:07:54,050 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 2] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:07:54,060 [DEBUG]  There is a memorised next action 'action_restart'
+2021-02-17 20:07:54,080 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 2] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:07:54,081 [DEBUG]  There is no applicable rule.
+2021-02-17 20:07:54,081 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:07:54,081 [DEBUG]  Predicted next action 'action_restart' with confidence 1.00.
+2021-02-17 20:07:54,088 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:07:54,088 [DEBUG]  Action 'action_restart' ended with events '[<rasa.shared.core.events.Restarted object at 0x0000016008885880>]'.
+2021-02-17 20:07:54,088 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:07:54,088 [DEBUG]  Predicted next action 'action_session_start' with confidence 1.00.
+2021-02-17 20:07:54,088 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:07:54,096 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x0000016008885A30>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 20:07:54,099 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:07:54,100 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:39,677 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:39,699 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:39,699 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:39,704 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:08:39,868 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:08:40,057 [DEBUG]  Received user message 'hey you' with intent '{'id': 1450572001171935847, 'name': 'greet', 'confidence': 0.9999967813491821}' and entities '[]'
+2021-02-17 20:08:40,078 [DEBUG]  Logged UserUtterance - tracker now has 68 events.
+2021-02-17 20:08:40,086 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-02-17 20:08:40,091 [DEBUG]  There is a memorised next action 'utter_greet'
+2021-02-17 20:08:40,139 [DEBUG]  Current tracker state:
+[state 1] user text: hey you | previous action name: action_listen
+2021-02-17 20:08:40,139 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:40,139 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-02-17 20:08:40,139 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:40,150 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:08:40,150 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:08:40,150 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:08:40,150 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2021-02-17 20:08:40,166 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600875B820>]'.
+2021-02-17 20:08:40,169 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Yay!😇 Can I help you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1613621320.166065)]'.
+2021-02-17 20:08:40,178 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-02-17 20:08:40,178 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:08:40,198 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-02-17 20:08:40,199 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:40,199 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:08:40,199 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:08:40,207 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:08:40,207 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:08:40,215 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:51,743 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:51,750 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:51,750 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:51,758 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:08:51,832 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:08:51,900 [DEBUG]  Received user message 'I want to check the weather' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9999526143074036}' and entities '[]'
+2021-02-17 20:08:51,910 [DEBUG]  Logged UserUtterance - tracker now has 73 events.
+2021-02-17 20:08:51,910 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:08:51,910 [DEBUG]  There is a memorised next action 'utter_ask_location'
+2021-02-17 20:08:51,942 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: I want to check the weather | previous action name: action_listen
+2021-02-17 20:08:51,942 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:51,942 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:08:51,949 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:51,949 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:08:51,949 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:08:51,949 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:08:51,957 [DEBUG]  Predicted next action 'utter_ask_location' with confidence 1.00.
+2021-02-17 20:08:51,957 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600875B610>]'.
+2021-02-17 20:08:51,957 [DEBUG]  Action 'utter_ask_location' ended with events '[BotUttered('In what location 🌍 ?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_location"}, 1613621331.9578314)]'.
+2021-02-17 20:08:51,965 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:08:51,970 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:08:51,990 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:08:51,990 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:51,998 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:08:51,998 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:08:51,998 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:08:51,998 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:08:52,010 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:55,992 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:56,000 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:56,000 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:08:56,011 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:08:56,114 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:08:56,164 [DEBUG]  Received user message 'Lagos' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.31971511244773865}' and entities '[{'entity': 'location', 'start': 0, 'end': 5, 'confidence_entity': 0.8913883566856384, 'value': 'Lagos', 'extractor': 'DIETClassifier'}]'
+2021-02-17 20:08:56,170 [DEBUG]  Current slot values: 
+	location: Lagos
+2021-02-17 20:08:56,170 [DEBUG]  Logged UserUtterance - tracker now has 79 events.
+2021-02-17 20:08:56,178 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet
+[state 2] user intent: ask_weather | previous action name: action_listen
+[state 3] user intent: ask_weather | previous action name: utter_ask_location
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:08:56,178 [DEBUG]  There is a memorised next action 'action_weather'
+2021-02-17 20:08:56,199 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user text: Lagos | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:08:56,210 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:56,210 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:08:56,210 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:56,210 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:08:56,210 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:08:56,219 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:08:56,220 [DEBUG]  Predicted next action 'action_weather' with confidence 1.00.
+2021-02-17 20:08:56,220 [DEBUG]  Calling action endpoint to run action 'action_weather'.
+2021-02-17 20:08:56,228 [DEBUG]  The URL 'http://localhost:5002/webhook/' has a trailing slash. Please make sure the target server supports trailing slashes for this endpoint.
+2021-02-17 20:08:58,449 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000001600888E430>]'.
+2021-02-17 20:08:58,458 [DEBUG]  Action 'action_weather' ended with events '[<rasa.shared.core.events.SlotSet object at 0x0000016008897BE0>]'.
+2021-02-17 20:08:58,458 [DEBUG]  Current slot values: 
+	location: Lagos
+2021-02-17 20:08:58,458 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:08:58,466 [DEBUG]  Launch DeLorean...
+2021-02-17 20:08:58,470 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_weather'}}]
+2021-02-17 20:08:58,470 [DEBUG]  There is a memorised next action 'action_restart'
+2021-02-17 20:08:58,515 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 6] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:08:58,515 [DEBUG]  There is no applicable rule.
+2021-02-17 20:08:58,520 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:08:58,520 [DEBUG]  Predicted next action 'action_restart' with confidence 1.00.
+2021-02-17 20:08:58,520 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:08:58,529 [DEBUG]  Action 'action_restart' ended with events '[<rasa.shared.core.events.Restarted object at 0x0000016008897490>]'.
+2021-02-17 20:08:58,529 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:08:58,529 [DEBUG]  Predicted next action 'action_session_start' with confidence 1.00.
+2021-02-17 20:08:58,529 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:08:58,529 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x0000016008757790>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 20:08:58,537 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:08:58,540 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:27,587 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:27,612 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:27,612 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:27,619 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:12:27,849 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:12:28,219 [DEBUG]  Received user message 'check the weather for Lagos for me' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9999779462814331}' and entities '[]'
+2021-02-17 20:12:28,239 [DEBUG]  Logged UserUtterance - tracker now has 88 events.
+2021-02-17 20:12:28,249 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:12:28,257 [DEBUG]  There is a memorised next action 'utter_ask_location'
+2021-02-17 20:12:28,336 [DEBUG]  Current tracker state:
+[state 1] user text: check the weather for Lagos for me | previous action name: action_listen
+2021-02-17 20:12:28,339 [DEBUG]  There is no applicable rule.
+2021-02-17 20:12:28,339 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:12:28,339 [DEBUG]  There is no applicable rule.
+2021-02-17 20:12:28,347 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:12:28,347 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:12:28,347 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:12:28,355 [DEBUG]  Predicted next action 'utter_ask_location' with confidence 1.00.
+2021-02-17 20:12:28,367 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016009FA97F0>]'.
+2021-02-17 20:12:28,367 [DEBUG]  Action 'utter_ask_location' ended with events '[BotUttered('What location actually 🗺?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_location"}, 1613621548.3678463)]'.
+2021-02-17 20:12:28,379 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:12:28,380 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:12:28,401 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:12:28,401 [DEBUG]  There is no applicable rule.
+2021-02-17 20:12:28,401 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:12:28,401 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:12:28,412 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:12:28,412 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:12:28,420 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:35,362 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:35,362 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:35,362 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:12:35,370 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:12:35,398 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:12:35,445 [DEBUG]  Received user message 'Lagos' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.31971511244773865}' and entities '[{'entity': 'location', 'start': 0, 'end': 5, 'confidence_entity': 0.8913883566856384, 'value': 'Lagos', 'extractor': 'DIETClassifier'}]'
+2021-02-17 20:12:35,447 [DEBUG]  Current slot values: 
+	location: Lagos
+2021-02-17 20:12:35,449 [DEBUG]  Logged UserUtterance - tracker now has 94 events.
+2021-02-17 20:12:35,449 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:12:35,458 [DEBUG]  There is a memorised next action 'action_weather'
+2021-02-17 20:12:35,480 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user text: Lagos | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:12:35,480 [DEBUG]  There is no applicable rule.
+2021-02-17 20:12:35,480 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:12:35,488 [DEBUG]  There is no applicable rule.
+2021-02-17 20:12:35,488 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:12:35,488 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:12:35,488 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:12:35,488 [DEBUG]  Predicted next action 'action_weather' with confidence 1.00.
+2021-02-17 20:12:35,500 [DEBUG]  Calling action endpoint to run action 'action_weather'.
+2021-02-17 20:12:35,500 [DEBUG]  The URL 'http://localhost:5002/webhook/' has a trailing slash. Please make sure the target server supports trailing slashes for this endpoint.
+2021-02-17 20:12:37,780 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x00000160088A0E20>]'.
+2021-02-17 20:12:37,780 [DEBUG]  Action 'action_weather' ended with events '[BotUttered('It is currently "Not available" in "Not available" at the moment. The temperature is "Not available" degrees, the humidity is "Not available%" and the wind speed is "Not available" mph. 
+NETWORK ERROR! check your internet connection.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1613621557.7809253), <rasa.shared.core.events.SlotSet object at 0x000001600889EBE0>]'.
+2021-02-17 20:12:37,780 [DEBUG]  Current slot values: 
+	location: Lagos
+2021-02-17 20:12:37,780 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:12:37,788 [DEBUG]  Launch DeLorean...
+2021-02-17 20:12:37,788 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_weather'}}]
+2021-02-17 20:12:37,796 [DEBUG]  There is a memorised next action 'action_restart'
+2021-02-17 20:12:37,816 [DEBUG]  Current tracker state:
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:12:37,820 [DEBUG]  There is no applicable rule.
+2021-02-17 20:12:37,820 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:12:37,820 [DEBUG]  Predicted next action 'action_restart' with confidence 1.00.
+2021-02-17 20:12:37,828 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:12:37,828 [DEBUG]  Action 'action_restart' ended with events '[<rasa.shared.core.events.Restarted object at 0x000001600889EF10>]'.
+2021-02-17 20:12:37,828 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:12:37,836 [DEBUG]  Predicted next action 'action_session_start' with confidence 1.00.
+2021-02-17 20:12:37,837 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:12:37,839 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x0000016008890D90>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 20:12:37,839 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:12:37,839 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:00,439 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:00,471 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:00,471 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:00,471 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:29:00,734 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:29:01,102 [DEBUG]  Received user message 'hi' with intent '{'id': 1450572001171935847, 'name': 'greet', 'confidence': 0.9999966025352478}' and entities '[]'
+2021-02-17 20:29:01,118 [DEBUG]  Logged UserUtterance - tracker now has 104 events.
+2021-02-17 20:29:01,134 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-02-17 20:29:01,134 [DEBUG]  There is a memorised next action 'utter_greet'
+2021-02-17 20:29:01,361 [DEBUG]  Current tracker state:
+[state 1] user text: hi | previous action name: action_listen
+2021-02-17 20:29:01,361 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:01,369 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-02-17 20:29:01,369 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:01,369 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:29:01,377 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:29:01,377 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:29:01,377 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2021-02-17 20:29:01,393 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x00000160088A0B50>]'.
+2021-02-17 20:29:01,401 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Yay!😇 Can I help you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1613622541.3935707)]'.
+2021-02-17 20:29:01,409 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-02-17 20:29:01,417 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:29:01,433 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-02-17 20:29:01,433 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:01,433 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:29:01,433 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:29:01,441 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:29:01,441 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:29:01,449 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:16,512 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:16,520 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:16,520 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:16,528 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:29:16,632 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:29:16,759 [DEBUG]  Received user message 'yeah, i want to check the weather pls' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.9998793005943298}' and entities '[]'
+2021-02-17 20:29:16,767 [DEBUG]  Logged UserUtterance - tracker now has 109 events.
+2021-02-17 20:29:16,767 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:29:16,767 [DEBUG]  There is a memorised next action 'utter_ask_location'
+2021-02-17 20:29:16,791 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: yeah, i want to check the weather pls | previous action name: action_listen
+2021-02-17 20:29:16,791 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:16,799 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+2021-02-17 20:29:16,799 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:16,799 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:29:16,807 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:29:16,807 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:29:16,807 [DEBUG]  Predicted next action 'utter_ask_location' with confidence 1.00.
+2021-02-17 20:29:16,807 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016008890340>]'.
+2021-02-17 20:29:16,807 [DEBUG]  Action 'utter_ask_location' ended with events '[BotUttered('Can I know the location?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_location"}, 1613622556.8079538)]'.
+2021-02-17 20:29:16,816 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:29:16,816 [DEBUG]  There is a memorised next action 'action_listen'
+2021-02-17 20:29:16,840 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+2021-02-17 20:29:16,840 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:16,840 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:29:16,840 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:29:16,840 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:29:16,848 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:29:16,848 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:24,341 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:24,341 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:24,352 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:24,352 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:29:24,392 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:29:24,536 [DEBUG]  Received user message 'Lagos' with intent '{'id': 2668957298353450286, 'name': 'ask_weather', 'confidence': 0.31971511244773865}' and entities '[{'entity': 'location', 'start': 0, 'end': 5, 'confidence_entity': 0.8913883566856384, 'value': 'Lagos', 'extractor': 'DIETClassifier'}]'
+2021-02-17 20:29:24,544 [DEBUG]  Current slot values: 
+	location: Lagos
+2021-02-17 20:29:24,544 [DEBUG]  Logged UserUtterance - tracker now has 115 events.
+2021-02-17 20:29:24,552 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet
+[state 2] user intent: ask_weather | previous action name: action_listen
+[state 3] user intent: ask_weather | previous action name: utter_ask_location
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:29:24,552 [DEBUG]  There is a memorised next action 'action_weather'
+2021-02-17 20:29:24,624 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user text: Lagos | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:29:24,635 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:24,642 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+2021-02-17 20:29:24,642 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:24,642 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:29:24,650 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:29:24,650 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:29:24,650 [DEBUG]  Predicted next action 'action_weather' with confidence 1.00.
+2021-02-17 20:29:24,693 [DEBUG]  Calling action endpoint to run action 'action_weather'.
+2021-02-17 20:29:24,703 [DEBUG]  The URL 'http://localhost:5002/webhook/' has a trailing slash. Please make sure the target server supports trailing slashes for this endpoint.
+2021-02-17 20:29:27,059 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x00000160088A6A00>]'.
+2021-02-17 20:29:27,059 [DEBUG]  Action 'action_weather' ended with events '[BotUttered('This is currently "Not available" at the moment. 
+
+NETWORK ERROR! check your internet connection and try again.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1613622567.0597446), <rasa.shared.core.events.SlotSet object at 0x00000160088AE7F0>]'.
+2021-02-17 20:29:27,059 [DEBUG]  Current slot values: 
+	location: Lagos
+2021-02-17 20:29:27,067 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet
+[state 1] user intent: ask_weather | previous action name: action_listen
+[state 2] user intent: ask_weather | previous action name: utter_ask_location
+[state 3] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 4] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:29:27,067 [DEBUG]  Launch DeLorean...
+2021-02-17 20:29:27,075 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_weather', 'entities': ('location',)}, 'slots': {'location': (1.0,)}, 'prev_action': {'action_name': 'action_weather'}}]
+2021-02-17 20:29:27,075 [DEBUG]  There is a memorised next action 'action_restart'
+2021-02-17 20:29:27,102 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_weather | previous action name: action_listen
+[state 4] user intent: ask_weather | previous action name: utter_ask_location
+[state 5] user intent: ask_weather | user entities: ('location',) | previous action name: action_listen | slots: {'location': (1.0,)}
+[state 6] user intent: ask_weather | user entities: ('location',) | previous action name: action_weather | slots: {'location': (1.0,)}
+2021-02-17 20:29:27,110 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:27,110 [DEBUG]  Predicted next action using policy_0_AugmentedMemoizationPolicy.
+2021-02-17 20:29:27,110 [DEBUG]  Predicted next action 'action_restart' with confidence 1.00.
+2021-02-17 20:29:27,118 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:29:27,118 [DEBUG]  Action 'action_restart' ended with events '[<rasa.shared.core.events.Restarted object at 0x00000160088AA6D0>]'.
+2021-02-17 20:29:27,118 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:29:27,118 [DEBUG]  Predicted next action 'action_session_start' with confidence 1.00.
+2021-02-17 20:29:27,126 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:29:27,126 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x00000160088B6310>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-02-17 20:29:27,126 [DEBUG]  Current slot values: 
+	location: None
+2021-02-17 20:29:27,134 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:59,792 [DEBUG]  Issuing ticket for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:59,792 [DEBUG]  Acquiring lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:59,800 [DEBUG]  Acquired lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.
+2021-02-17 20:29:59,800 [DEBUG]  Recreating tracker for id '2fbff315-2a19-41fc-934a-6061cf55d83b'
+2021-02-17 20:29:59,872 [DEBUG]  No features present. You are using an empty spaCy model.
+2021-02-17 20:29:59,951 [DEBUG]  Received user message 'alright then' with intent '{'id': 6984861129314946429, 'name': 'mood_great', 'confidence': 0.8742915987968445}' and entities '[]'
+2021-02-17 20:29:59,959 [DEBUG]  Logged UserUtterance - tracker now has 125 events.
+2021-02-17 20:29:59,959 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+2021-02-17 20:29:59,959 [DEBUG]  Launch DeLorean...
+2021-02-17 20:29:59,967 [DEBUG]  Current tracker state [{}, {'user': {'intent': 'mood_great'}, 'prev_action': {'action_name': 'action_listen'}}]
+2021-02-17 20:29:59,967 [DEBUG]  There is no memorised next action
+2021-02-17 20:29:59,991 [DEBUG]  Current tracker state:
+[state 1] user text: alright then | previous action name: action_listen
+2021-02-17 20:29:59,999 [DEBUG]  There is no applicable rule.
+2021-02-17 20:29:59,999 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+2021-02-17 20:29:59,999 [DEBUG]  There is a rule for the next action 'utter_happy'.
+2021-02-17 20:30:00,039 [DEBUG]  Made prediction using user intent.
+2021-02-17 20:30:00,055 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-02-17 20:30:00,055 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-02-17 20:30:00,063 [DEBUG]  Predicted next action 'utter_happy' with confidence 1.00.
+2021-02-17 20:30:00,071 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x00000160088AA880>]'.
+2021-02-17 20:30:00,079 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Very good, carry on pls!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_happy"}, 1613622600.0718646)]'.
+2021-02-17 20:30:00,087 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+2021-02-17 20:30:00,089 [DEBUG]  Launch DeLorean...
+2021-02-17 20:30:00,092 [DEBUG]  Current tracker state [{}, {'prev_action': {'action_name': 'utter_happy'}}]
+2021-02-17 20:30:00,092 [DEBUG]  There is no memorised next action
+2021-02-17 20:30:00,104 [DEBUG]  Current tracker state:
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+2021-02-17 20:30:00,104 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-02-17 20:30:00,112 [DEBUG]  Predicted next action using policy_2_RulePolicy.
+2021-02-17 20:30:00,112 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-02-17 20:30:00,112 [DEBUG]  Policy prediction ended with events '[]'.
+2021-02-17 20:30:00,112 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-02-17 20:30:00,120 [DEBUG]  Deleted lock for conversation '2fbff315-2a19-41fc-934a-6061cf55d83b'.

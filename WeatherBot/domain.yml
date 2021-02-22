@@ -53,15 +53,20 @@ responses:
   - text: "Hi!"
   - text: "Yo! my friend!"
   - text: "Yeah, howdy!"
-  - text: "Hello there!"
+  - text: "Hello there! 👋"
+  utter_mood_great:
+  - text: I've never been better too 😊.
+  - text: I'm really doing good too.
+  - text: I fine though. Carry on pls 😎
   utter_goodbye:
   - text: Talk to you later.
   - text: Bye bye 😔
   - text: Have a great day, hope I was of help today 😐
   utter_ask_location:
-  - text: In what location 🌍 ?
+  - text: what is the location 🌍 ?
   - text: Can I know the location?
   - text: What location actually 🗺?
+  - text: And the location is?
   utter_thank_you:
   - text: Oh, it alright 😎
   - text: You're welcome.
@@ -73,15 +78,15 @@ responses:
   - text: I can help you get the WEATHER condition of a particular place.
   - text: |-
       You can ask me... 
-       What is the weather condition of Lekki 
+       What the weather condition of a place is, 
        e.t.c 
   utter_out_of_scope:
   - text: Don't know how to answer that, can you be a bit specific?
   - text: Can you rephrase please?
   utter_default:
   - text: Question kinda out of my scope, pls rephrase
-  - text: Didn't really understand, rephrase that pls 😐
-  - text: I don't get it, how about rephrasing it ☺
+  - text: Didn't really understand, rephrase that pls.
+  - text: I don't get it, how about rephrasing that ☺
   utter_anything_else:
   - text: Is there anything else I can help you with again?
   - text: Do you need help again?
@@ -110,7 +115,7 @@ responses:
   - text: "I am a bot for sure."
   - text: "Yeah, I'm a bot powered by everyone... including you 🙂"
   utter_bot_name:
-  - text: I'm Gwin by name, I still don't know why I bear that name.
+  - text: I'm Gwin by name, I must confess I love that name.
   - text: Call me Gwin.
   - text: My friends call me Gwin... it ok if you do too.
   utter_bot_developer:
