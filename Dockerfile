@@ -1,12 +1,12 @@
 FROM rasa/rasa:latest
 
-COPY app /app
-COPY server.sh /app/server.sh
+COPY WeatherBot /WeatherBot
+COPY server.sh /WeatherBot/server.sh
 
 USER root
-RUN chmod -R 777 /app
+RUN chmod -R 777 /WeatherBot
 USER 1001
 
-RUN rasa train nlu
+RUN rasa train 
 
-ENTRYPOINT ["/app/server.sh"]
+ENTRYPOINT ["/WeatherBot/server.sh"]
