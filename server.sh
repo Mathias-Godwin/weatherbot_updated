@@ -5,4 +5,7 @@ then
   PORT=5005
 fi
 
-rasa run --enable-api --port $PORT
+rasa run --model models --enable-api --cors "*" --debug --port $PORT
+cd app/
+
+# Start rasa server with nlu model
