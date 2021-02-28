@@ -70,7 +70,7 @@ responses:
   utter_thank_you:
   - text: Oh, it alright 😎
   - text: You're welcome.
-  - text: It's pleasure
+  - text: It's a pleasure
   utter_ok:
   - text: Ok then 👍
   - text: Alright.
@@ -108,9 +108,9 @@ responses:
   - text: Very good, carry on pls!
   utter_not_really:
   - text: I'd be very happy if I could 😎.
-  - text: I'm not sure if I can... working towards that actually.
+  - text: I'm not sure if I can... working towards that i guess.
   - text: I might be very soon!
-  - text: I'm that perfect yet... working towards that.
+  - text: I'm not actually that perfect yet... working towards that.
   utter_iamabot:
   - text: "I am a bot for sure."
   - text: "Yeah, I'm a bot powered by everyone... including you 🙂"
