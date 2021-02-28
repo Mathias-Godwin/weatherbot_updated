@@ -1,2 +1,4 @@
 action_endpoint:
   url: "http://localhost:5002/webhook"
+model:
+  https://github.com/Mathias-Godwin/weatherbot_updated/releases/download/rasa-latest-model/20210228-044802.tar.gz
