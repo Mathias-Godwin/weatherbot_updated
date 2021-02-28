@@ -64,5 +64,5 @@ rules:
 
 - rule: Say mood_great anytime the user mood_great
   steps:
-  - intent: greet
+  - intent: mood_great
   - action: utter_mood_great
