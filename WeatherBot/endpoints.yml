@@ -1,4 +1,4 @@
 action_endpoint:
-  url: "http://localhost:5002/webhook"
+  url: "http://gwinibot.herokuapp.com/webhook"
 model:
-  https://github.com/Mathias-Godwin/weatherbot_updated/releases/download/rasa-latest-model/20210228-044802.tar.gz
+  url: https://github.com/Mathias-Godwin/weatherbot_updated/releases/download/gwinbot/20210301-140130.tar.gz
