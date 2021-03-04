@@ -249,6 +249,9 @@ responses:
   - text: I'm not sure if I can {user_name}😎.
   - text: I may not be able to handle that {user_name}
   - text: I'm not capable of most things... Who knows if I could do that.
+ utter_bot_developed_date_user_name:
+ - text: Around may 5
+ - text: It should be may 5 but {user_name} I'm not to sure of that.
 
 actions:
 - action_weather
