@@ -55,6 +55,8 @@ intents:
     use_entities: true
 - goodbye_bot_name:
     use_entities: true
+- tell_user_name:
+    user_entities: true
 entities:
 - location
 - user_name
