@@ -101,6 +101,8 @@ nlu:
     - bye!
     - alright, goodbye
     - goodbye buddy!
+    - have a great day
+    - have a wonderful day 
 - intent: greet
   examples: |
     - Hi
@@ -492,3 +494,198 @@ nlu:
     - who code you up?
     - who created you and your component?
     - someone must have built you
+- intent: greet_bot_name
+  examples: |
+    - Hi [Gwin](bot_name)
+    - Hey [Gwin](bot_name)
+    - Hi bot [Gwin](bot_name)
+    - Hey bot [Gwin](bot_name)
+    - Hello [Gwin](bot_name)
+    - Good morning [Gwin](bot_name)
+    - hi again [Gwin](bot_name)
+    - hi folks [Gwin](bot_name)
+    - hi Mister [Gwin](bot_name)
+    - hi pal! [Gwin](bot_name)
+    - hi there [Gwin](bot_name)
+    - greetings [Gwin](bot_name)
+    - hello everybody [Gwin](bot_name)
+    - hello is anybody there [Gwin](bot_name)
+    - hello robot [Gwin](bot_name)
+    - hallo [Gwin](bot_name)
+    - heeey [Gwin](bot_name)
+    - hi hi [Gwin](bot_name)
+    - hey [Gwin](bot_name)
+    - hey hey [Gwin](bot_name)
+    - hello there [Gwin](bot_name)
+    - hi [Gwin](bot_name)
+    - hello [Gwin](bot_name)
+    - yo [Gwin](bot_name)
+    - hola [Gwin](bot_name)
+    - hi? [Gwin](bot_name)
+    - hey bot! [Gwin](bot_name)
+    - hello friend [Gwin](bot_name)
+    - good morning [Gwin](bot_name)
+    - hii [Gwin](bot_name)
+    - hello sweet boy [Gwin](bot_name)
+    - yoo [Gwin](bot_name)
+    - hey there [Gwin](bot_name)
+    - hiihihi [Gwin](bot_name)
+    - hello sweatheart [Gwin](bot_name)
+    - hellooo [Gwin](bot_name)
+    - helloooo [Gwin](bot_name)
+    - heyo [Gwin](bot_name)
+    - ayyyy whaddup [Gwin](bot_name)
+    - hello? [Gwin](bot_name)
+    - Hallo [Gwin](bot_name)
+    - heya [Gwin](bot_name)
+    - hey bot [Gwin](bot_name)
+    - howdy [Gwin](bot_name)
+    - Hellllooooooo [Gwin](bot_name)
+    - whats up [Gwin](bot_name)
+    - Hei [Gwin](bot_name) 
+    - Well hello there ;) [Gwin](bot_name)
+    - I said, helllllloooooO!!!! [Gwin](bot_name)
+    - Heya [Gwin](bot_name)
+    - Whats up my bot [Gwin](bot_name)
+    - hiii [Gwin](bot_name)
+    - heyho [Gwin](bot_name)
+    - hey, let's talk [Gwin](bot_name)
+    - hey let's talk [Gwin](bot_name)
+    - jojojo [Gwin](bot_name) 
+    - hey dude [Gwin](bot_name)
+    - hello it is me again [Gwin](bot_name)
+    - what up [Gwin](bot_name) 
+    - jop [Gwin](bot_name)
+    - hi friend [Gwin](bot_name)
+    - hi there it's me [Gwin](bot_name)
+    - good evening [Gwin](bot_name)
+    - good afternoon [Gwin](bot_name)
+    - hin greet [Gwin](bot_name)
+    - hello there! [Gwin](bot_name)
+- intent: mood_great_bot_name
+  examples: |
+    - I am doing great [Gwin](bot_name)
+    - I am absolutely alright [Gwin](bot_name)
+    - I am fine [Gwin](bot_name)
+    - I am happy. How about you [Gwin](bot_name)
+    - fine [Gwin](bot_name)
+    - alright [Gwin](bot_name)
+    - good [Gwin](bot_name)
+    - going good [Gwin](bot_name)
+    - doing good [Gwin](bot_name)
+    - happy [Gwin](bot_name)
+    - superb [Gwin](bot_name)
+    - All good. How are you? [Gwin](bot_name)
+    - great [Gwin](bot_name)
+    - doing great [Gwin](bot_name)
+    - I am good [Gwin](bot_name)
+    - absolutely fine [Gwin](bot_name)
+    - not so bad [Gwin](bot_name)
+    - am good [Gwin](bot_name)
+    - doing great atleast [Gwin](bot_name)
+    - am fine [Gwin](bot_name)
+    - I'm fine [Gwin](bot_name)
+    - I'm really doing great [Gwin](bot_name)
+    - I'm happy. [Gwin](bot_name)
+    - I'm alright [Gwin](bot_name)
+    - am alright [Gwin](bot_name) 
+    - am really good [Gwin](bot_name)
+    - doing fine [Gwin](bot_name)
+    - not so bad afterall [Gwin](bot_name)
+    - am not so bad  [Gwin](bot_name)
+- intent: mood_unhappy_bot_name
+  examples: |
+    - my day was horrible [Gwin](bot_name)
+    - I am sad [Gwin](bot_name)
+    - I don't feel very well [Gwin](bot_name)
+    - I am disappointed [Gwin](bot_name)
+    - super sad [Gwin](bot_name)
+    - I'm so sad [Gwin](bot_name) 
+    - sad [Gwin](bot_name)
+    - very sad [Gwin](bot_name)
+    - unhappy [Gwin](bot_name)
+    - not good [Gwin](bot_name)
+    - not very good [Gwin](bot_name)
+    - extremly sad [Gwin](bot_name)
+    - so saad [Gwin](bot_name)
+    - so sad [Gwin](bot_name)
+- intent: bot_challenge_bot_name
+  examples: |
+    - are you a bot? [Gwin](bot_name)
+    - are you a human? [Gwin](bot_name)
+    - am I talking to a bot [Gwin](bot_name)?
+    - am I talking to a human [Gwin](bot_name)?
+    - you're a bot right [Gwin](bot_name)?
+    - you are a bot [Gwin](bot_name)?
+    - you must be a bot [Gwin](bot_name)?
+    - you must be a robot [Gwin](bot_name)?
+    - are you not a robot [Gwin](bot_name)?
+- intent: ask_bot_developed_date_bot_name
+  examples: |
+    - when where you created [Gwin](bot_name)?
+    - what is your birthday [Gwin](bot_name)?
+    - when where you made [Gwin](bot_name)?
+    - your birthdate [Gwin](bot_name)?
+    - your date of birth [Gwin](bot_name)
+- intent: ask_something_else_bot_name
+  examples: |
+    - can you polish a shoe [Gwin](bot_name)?
+    - can you run [Gwin](bot_name)?
+    - can you watch the TV [Gwin](bot_name)?
+    - is there anything else you can do [Gwin](bot_name)?
+    - can you see me [Gwin](bot_name)?
+    - are there anything else you can do [Gwin](bot_name)?
+    - what else can you do [Gwin](bot_name)?
+    - anything else that you can do [Gwin](bot_name)?
+    - what can you do aside this [Gwin](bot_name)?
+    - what else can you do now [Gwin](bot_name)?
+    - can you make phone call [Gwin](bot_name)?
+    - can you talk like human [Gwin](bot_name)?
+    - can you speak to my daughter [Gwin](bot_name)?
+    - can you be my boyfriend [Gwin](bot_name)?
+    - can you drive my car [Gwin](bot_name)?
+    - can you go out of the internet [Gwin](bot_name)
+    - will you come to me [Gwin](bot_name)?
+    - will you be my bestie [Gwin](bot_name)?
+- intent: deny_bot_name
+  examples: |
+    - no [Gwin](bot_name)
+    - n [Gwin](bot_name)
+    - never [Gwin](bot_name)
+    - I don't think so [Gwin](bot_name)
+    - don't like that [Gwin](bot_name)
+    - no way [Gwin](bot_name)
+    - not really [Gwin](bot_name)
+    - na [Gwin](bot_name)
+- intent: ask_bot_developer_bot_name
+  examples: |
+    - who is your developer [Gwin](bot_name)?
+    - who program you [Gwin](bot_name)?
+    - who programmed you [Gwin](bot_name)?
+    - you're developed by who, [Gwin](bot_name)?
+    - who made you [Gwin](bot_name)?
+    - who code you up [Gwin](bot_name)?
+    - who created you and your component [Gwin](bot_name)?
+    - someone must have built you [Gwin](bot_name)
+- intent: tell_user_name
+  examples: |
+    - My name is [Mathias](user_name)
+    - I'm [Mathew John](user_name)
+    - call me [John Moses](user_name)
+    - my name is [Bob Acri](user_name)
+    - I am [Babtunde Emmanuel](user_name)
+    - just call me [Emmanuel](user_name)
+    - [Grace](user_name)
+    - [Austin](user_name)
+    - [Goodwill](user_name)
+    - [Goodfellow](user_name)
+    - my friends call [Tobi](user_name)
+    - people call me [Omowumi](user_name)
+    - hi, my name is [Godwin](user_name)
+    - hello, my name is [Ada](user_name)
+    - hey there, call me [Mary](user_name)
+    - yeah, my name is [David](user_name)
+    - call me [Augustine](user_name) if you don't mind.
+    - hi, I'm [Joshua](user_name) by name.
+    - aha! my name is [Joseph](user_name).
+    

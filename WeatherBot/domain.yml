@@ -3,7 +3,7 @@ config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: false
+  carry_over_slots_to_new_session: True
 intents:
 - thank_you:
     use_entities: true
@@ -37,12 +37,42 @@ intents:
     use_entities: true
 - ask_something_else:
     use_entities: true
+- ask_something_else_bot_name:
+    use_entities: true
+- greet_bot_name:
+    use_entities: true
+- deny_bot_name:
+    use_entities: true
+- ask_bot_developer_bot_name:
+    use_entities: true
+- ask_bot_developed_date_bot_name:
+    use_entities: true
+- mood_great_bot_name:
+    use_entities: true
+- mood_unhappy_bot_name:
+    use_entities: true
+- bot_challenge_bot_name:
+    use_entities: true
+- goodbye_bot_name:
+    use_entities: true
 entities:
 - location
+- user_name
+- bot_name
 slots:
   location:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  user_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  bot_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: Gwin
     auto_fill: true
     influence_conversation: true
 responses:
@@ -57,7 +87,7 @@ responses:
   utter_mood_great:
   - text: I've never been better too 😊.
   - text: I'm really doing good too.
-  - text: I fine though. Carry on pls 😎
+  - text: I fine though. Carry on please 😎
   utter_goodbye:
   - text: Talk to you later.
   - text: Bye bye 😔
@@ -71,6 +101,10 @@ responses:
   - text: Oh, it alright 😎
   - text: You're welcome.
   - text: It's a pleasure
+  utter_thank_you_user_name:
+  - text: Oh, it alright {user_name} 😎
+  - text: You're welcome, {user_name}.
+  - text: It's a pleasure
   utter_ok:
   - text: Ok then 👍
   - text: Alright.
@@ -83,14 +117,22 @@ responses:
   utter_out_of_scope:
   - text: Don't know how to answer that, can you be a bit specific?
   - text: Can you rephrase please?
+  - text: To be sincere I don't know what to say, Can you be a little bit specific 🙏?
   utter_default:
-  - text: Question kinda out of my scope, pls rephrase
-  - text: Didn't really understand, rephrase that pls.
-  - text: I don't get it, how about rephrasing that ☺
+  - text: Question kinda out of my scope, please rephrase it.
+  - text: Didn't really understand, rephrase that please.
+  - text: I don't get it {user_name}, how about rephrasing that ☺
+  - text: Don't know how to answer that, can you be a bit specific?
+  - text: Can you rephrase please?
+  - text: To be sincere I don't know what to say, Can you be a little bit specific 🙏?
   utter_anything_else:
   - text: Is there anything else I can help you with again?
   - text: Do you need help again?
   - text: What can I help you with again?
+  utter_anything_else_user_name:
+  - text: Is there anything else I can help you with again {user_name}?
+  - text: Do you need help again {user_name}?
+  - text: What can I help you with again {user_name}?
   utter_cheer_up:
   - text: "Here is something to cheer you up, Just don't be down upon yourself.:"
     image: "https://i.imgur.com/qLo0ztc.jpg"
@@ -100,22 +142,34 @@ responses:
     image: https://i.imgur.com/5rEdqPi.jpg
   - text: "Quotes help to recover sometimes, here is one:"
     image: https://i.imgur.com/usF6y4F.png
+  utter_cheer_up_name:
+  - text: "Here is something to cheer you up {user_name}, Just don't be down upon yourself.:"
+    image: "https://i.imgur.com/qLo0ztc.jpg"
+  - text: "Sometimes we feel lost and lonely but behold Their are still people who cares about us...\n You might like this:"
+    image: https://i.imgur.com/f0lfM8w.png
+  - text: "This really helps {user_name}, Try connecting with any of your friends:"
+    image: https://i.imgur.com/5rEdqPi.jpg
+  - text: "Quotes help to recover sometimes, here is one:"
+    image: https://i.imgur.com/usF6y4F.png
   utter_did_that_help:
   - text: "Did that help you?"
   - text: I hope it helps 😐
   utter_happy:
   - text: "Great, carry on!"
-  - text: Very good, carry on pls!
+  - text: Very good, carry on please!
+  utter_happy_user_name:
+  - text: "Great, carry on {user_name}!"
+  - text: Very good {user_name}, carry on please!
   utter_not_really:
-  - text: I'd be very happy if I could 😎.
-  - text: I'm not sure if I can... working towards that i guess.
-  - text: I might be very soon!
-  - text: I'm not actually that perfect yet... working towards that.
+  - text: I'm not sure if I can 😎.
+  - text: I'm not sure if I can... working towards good things I guess.
+  - text: I'm not capable of most things... Who knows if I could do that.
   utter_iamabot:
   - text: "I am a bot for sure."
   - text: "Yeah, I'm a bot powered by everyone... including you 🙂"
+  - text: "Ofcourse I'm a Ro-bot"
   utter_bot_name:
-  - text: I'm Gwin by name, I must confess I love that name.
+  - text: I'm Gwin by name, I must confess I love this name.
   - text: Call me Gwin.
   - text: My friends call me Gwin... it ok if you do too.
   utter_bot_developer:
@@ -130,7 +184,28 @@ responses:
   - text: "
         \n...
         \nWell! the big answer is, I'm been developed by
-        \nMathias Godwin, A scare face man from Nigeria.
+        \nMathias Godwin, A scar face man from Nigeria.
+        \nI've tried to asking him about where to find him and got this...
+        \nFacebook(Brailey Gwin), Phone(+2347061009672), Email(godwinsaint6@gmail.com).
+        "
+  - text: "
+        \n...
+        \nHis full name is Mathias Godwin, Email(godwinsaint6@gmail.com), Phone(+2347061009672).
+        \nHe also love people calling him 'Gwin' like me... crazy huh 😎.
+        "
+  utter_bot_developer_user_name:
+  - text: "
+        \n...
+        \nname: Mathias Godwin.
+        \nEmail: godwinsaint6@gmail.com
+        \nPhone: +2347061009672
+        \n 
+        You can reach him on... Facebook(Brailey Gwin), Twitter(@godwinsaint6), Email(godwinsaint6@gmail.com).
+        "
+  - text: "
+        \n...
+        \nWell! the big answer for you {user_name} is; I'm been developed by
+        \nMathias Godwin, A scar face man from Nigeria.
         \nI've tried to asking him about where to find him and got this...
         \nFacebook(Brailey Gwin), Phone(+2347061009672), Email(godwinsaint6@gmail.com).
         "
@@ -140,8 +215,34 @@ responses:
         \nHe also love people calling him 'Gwin' like me... crazy huh 😎.
         "
   utter_bot_developed_date:
-  - text: Well, I guess May 5, don't ask me the year cuz you won't believe it.
+  - text: Well, I guess May 5.
   - text: May 5 if I could remember, don't ask me the year 🤠
+  utter_ask_user_name:
+  - text: It seems, we're chatting for the first time... Can I know your name?
+  - text: You're welcome here! what is your name please?
+  - text: We're are chatting for the first time... What is your name please?
+  uttter_greet_botname_ask_user_name:
+  - text: You just mentioned my name, What is your name too
+  - text: Hi, I want to your name too
+  utter_ok_user_name:
+  - text: Alright {user_name}.
+  - text: Oh yeah {user_name}!
+  utter_greet_user_name:
+  - text: Hello 😃 How can I help you {user_name}?
+  - text: Yay!😇 Can I help you {user_name}?
+  - text: "Hey! How are you {user_name}?"
+  - text: "Hi! {user_name}"
+  - text: "Yo! my friend {user_name}!"
+  - text: "Yeah, howdy!"
+  - text: "Hello hello {user_name}!"
+  utter_goodbye_user_name:
+  - text: Talk to you later, {user_name}.
+  - text: Bye bye {user_name}
+  - text: Have a great day, hope I was of help today 😐
+  utter_available_location:
+  - text: Should I check for {location}?
+  - text: The name {location} is your previous used location.\n Should I continue with that?  
+  - text: I'm about to use {location} as the location, should I continue?
 
 actions:
 - action_weather
