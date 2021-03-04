@@ -245,6 +245,10 @@ responses:
   - text: Should I check for {location}?
   - text: The name {location} is your previous used location.\n Should I continue with that?  
   - text: I'm about to use {location} as the location, should I continue?
+  utter_not_really_user_name:
+  - text: I'm not sure if I can {user_name}😎.
+  - text: I may not be able to handle that {user_name}
+  - text: I'm not capable of most things... Who knows if I could do that.
 
 actions:
 - action_weather
