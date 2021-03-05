@@ -41,6 +41,16 @@ rules:
   - intent: help
   - action: utter_how_can_help
 
+ 
+- rule: Say happy whenever the user affirm
+  steps:
+  - intent: affirm
+  - action: utter_happy
+
+- rule: Say cheer up whenever the user is deny
+  steps:
+  - intent: deny
+  - action: utter_ok
 
 - rule: Say No to anything outside the scope
   steps:
@@ -58,4 +68,44 @@ rules:
   - action: utter_mood_great
 
 
+- rule: Goodbye user with name
+  condition:
+  - slot_was_set:
+    - user_name: true
+  steps:
+  - intent: goodbye_bot_name
+  - action: utter_goodbye_user_name
+
+- rule: Ok to  user with name after denial
+  condition:
+  - slot_was_set:
+    - user_name: true
+  steps:
+  - intent: deny_bot_name
+  - action: utter_ok_user_name
+
+
+- rule: ask bot developer name with bot name
+  condition:
+  - slot_was_set:
+    - user_name: true
+  steps:
+  - intent: ask_bot_developer_bot_name
+  - action: utter_bot_developer_user_name
+
+- rule: ask bot developed date with bot name
+  condition:
+  - slot_was_set:
+    - user_name: true
+  steps:
+  - intent: ask_bot_developed_date_bot_name
+  - action: utter_bot_developed_date_user_name
+
+- rule: Say No to anything outside the scope with user name
+  condition:
+  - slot_was_set:
+    - user_name: true
+  steps:
+  - intent: ask_something_else_bot_name
+  - action: utter_not_really_user_name
 

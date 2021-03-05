@@ -679,7 +679,7 @@ nlu:
     - [Austin](user_name)
     - [Goodwill](user_name)
     - [Goodfellow](user_name)
-    - my friends call [Tobi](user_name)
+    - my friends call me [Tobi](user_name)
     - people call me [Omowumi](user_name)
     - hi, my name is [Godwin](user_name)
     - hello, my name is [Ada](user_name)
@@ -688,4 +688,4 @@ nlu:
     - call me [Augustine](user_name) if you don't mind.
     - hi, I'm [Joshua](user_name) by name.
     - aha! my name is [Joseph](user_name).
-    - hey you [Gwin](bot_name), I'm [Deborah](user_name)
+    
