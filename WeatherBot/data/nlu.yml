@@ -688,4 +688,4 @@ nlu:
     - call me [Augustine](user_name) if you don't mind.
     - hi, I'm [Joshua](user_name) by name.
     - aha! my name is [Joseph](user_name).
-    
+    - hey you [Gwin](bot_name), I'm [Deborah](user_name)
