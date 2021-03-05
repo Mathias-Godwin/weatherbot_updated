@@ -1,5 +1,5 @@
 stories:
-- story: interactive_story_1
+- story: interactive_story_0
   steps:
   - intent: greet
   - action: utter_greet
@@ -15,7 +15,7 @@ stories:
   - action: utter_thank_you
   - action: action_restart
 
-- story: interactive_story_2
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
@@ -27,7 +27,7 @@ stories:
   - action: action_weather
   - action: action_restart
 
-- story: interactive_story_3
+- story: interactive_story_2
   steps:
   - intent: ask_weather
     entities:
@@ -36,6 +36,7 @@ stories:
     - location: Lagos
   - action: action_weather
   - action: action_restart
+  
 - story: story 3
   steps:
   - intent: ask_weather

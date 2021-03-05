@@ -41,16 +41,6 @@ rules:
   - intent: help
   - action: utter_how_can_help
 
- 
-- rule: Say happy whenever the user affirm
-  steps:
-  - intent: affirm
-  - action: utter_happy
-
-- rule: Say cheer up whenever the user is deny
-  steps:
-  - intent: deny
-  - action: utter_ok
 
 - rule: Say No to anything outside the scope
   steps:
